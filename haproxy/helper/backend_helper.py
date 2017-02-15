@@ -170,7 +170,7 @@ def get_basic_auth_setting(details, basic_auth, service_alias):
     setting = []
     exclude_basic_auth = get_service_attribute(details, "exclude_basic_auth", service_alias)
 
-    if basic_auth and exclude_basic_auth == None:
+    if basic_auth and not exclude_basic_auth:
         setting.append("acl need_auth http_auth(haproxy_userlist)")
         setting.append("http-request auth realm haproxy_basic_auth if !need_auth")
     return setting

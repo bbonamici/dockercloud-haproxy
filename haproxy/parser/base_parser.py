@@ -192,3 +192,7 @@ class EnvParser(object):
     @staticmethod
     def parse_failover(value):
         return value
+
+    @staticmethod
+    def parse_exclude_basic_auth(value):
+        return value
