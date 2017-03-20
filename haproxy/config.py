@@ -87,6 +87,7 @@ NBPROC = int(os.getenv("NBPROC", 1))
 SWARM_MODE_POLLING_INTERVAL = int(os.getenv("SWARM_MODE_POLLING_INTERVAL", 5))
 HAPROXY_USER=os.getenv("HAPROXY_USER", "haproxy")
 HAPROXY_GROUP=os.getenv("HAPROXY_GROUP", "haproxy")
+RELOAD_TIMEOUT = os.getenv("RELOAD_TIMEOUT", "0")
 
 # global
 RUNNING_MODE = None
